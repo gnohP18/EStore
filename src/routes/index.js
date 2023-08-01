@@ -1,10 +1,10 @@
-const itemsRouter = require('./items')
-const sitesRoute = require('./sites')
+const itemsRouter = require('./items');
+const sitesRoute = require('./sites');
 
-function route(app){
-    app.use('/items', itemsRouter)
+function route(app) {
+    app.use('/items', itemsRouter);
 
-    app.use('/', sitesRoute)
+    app.use('/', sitesRoute);
 }
 
 module.exports = route;

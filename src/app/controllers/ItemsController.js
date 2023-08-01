@@ -1,14 +1,13 @@
-class ItemsController{
-    
+class ItemsController {
     // [GET] /items
     index(req, res) {
-        res.render('items')
+        res.render('items');
     }
 
     // [GET] /items/:slug
     detail(req, res) {
-        res.send('Item detail')
+        res.send('Item detail');
     }
 }
 
-module.exports = new ItemsController;
+module.exports = new ItemsController();

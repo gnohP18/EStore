@@ -1,9 +1,9 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
-const itemsController = require('../app/controllers/ItemsController')
+const itemsController = require('../app/controllers/ItemsController');
 
-router.use('/:slug', itemsController.detail)
-router.use('/', itemsController.index)
+router.use('/:slug', itemsController.detail);
+router.use('/', itemsController.index);
 
-module.exports = router
+module.exports = router;
