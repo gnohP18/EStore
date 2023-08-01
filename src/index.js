@@ -5,8 +5,17 @@ const path = require('path')
 const app = express()
 const port = 1804
 
+const route = require('./routes');
+route(app);
+
 //config static file
 app.use(express.static(path.join(__dirname, '/public')))
+
+//use middleware
+app.use(express.urlencoded({
+    extended : true,
+}))
+app.use(express.json())
 
 //Logger morgan
 app.use(morgan('combined'))
@@ -18,9 +27,6 @@ app.engine('hbs', engine({
     extname: '.hbs'
 }))
 app.set('view engine', 'hbs')
-
 app.set('views', path.join(__dirname, 'resources/views'))
-
-app.get('/', (req, res) => res.render('home'))
 
 app.listen(port, () => console.log(`Listening port http://localhost:${port}`))
