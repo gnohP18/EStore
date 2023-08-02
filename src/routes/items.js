@@ -3,7 +3,7 @@ const router = express.Router();
 
 const itemsController = require('../app/controllers/ItemsController');
 
-router.use('/:slug', itemsController.detail);
-router.use('/', itemsController.index);
+router.get('/:slug', itemsController.detail);
+router.get('/', itemsController.index);
 
 module.exports = router;

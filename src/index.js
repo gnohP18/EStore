@@ -6,6 +6,11 @@ const app = express();
 const port = 1804;
 
 const route = require('./routes');
+
+//Connect to DB
+const database = require('./config/database/index');
+database.connectToDB();
+
 route(app);
 
 //config static file
@@ -32,6 +37,6 @@ app.engine(
     }),
 );
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources/views'));
+app.set('views', path.join(__dirname, 'resources', 'views'));
 
 app.listen(port, () => console.log(`Listening port http://localhost:${port}`));

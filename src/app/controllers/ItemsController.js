@@ -1,7 +1,16 @@
+const { json } = require('express');
+const Shoes = require('../models/Shoes');
+
 class ItemsController {
     // [GET] /items
     index(req, res) {
-        res.render('items');
+        Shoes.find({ size: 40 }).then(function (listShoes) {
+            if (listShoes) {
+                res.json(listShoes);
+                return;
+            }
+            res.status(400).json({ error: 'ERROR!' });
+        });
     }
 
     // [GET] /items/:slug
