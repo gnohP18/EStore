@@ -353,3 +353,4 @@ MigrationBackup/
 
 node_modules/
 src/public/css
+.gitignore

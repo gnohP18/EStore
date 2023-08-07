@@ -1,1 +1,17 @@
-<h1>List Item</h1>
+<div class="list-item mt-2">
+    <div class="row">
+        {{#each listShoes}}
+            <div class="col-sm-6 col-lg-4">
+                <div class="card mt-2">
+                    <a href="/items/{{ this.slug}}">
+                        <img class="card-img-top" src="{{ this.thumbNail }}" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">{{ this.name }} {{ this.color }}</p>
+                        <p class="card-text">{{ this.size }} {{ this.quantity }}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
