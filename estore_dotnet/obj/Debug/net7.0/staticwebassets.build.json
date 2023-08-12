@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "KxgB//DSZwMAmod7u8eWn3+yvGc7y5zbIQB3EEEbeH4=",
+  "Source": "estore_dotnet",
+  "BasePath": "_content/estore_dotnet",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

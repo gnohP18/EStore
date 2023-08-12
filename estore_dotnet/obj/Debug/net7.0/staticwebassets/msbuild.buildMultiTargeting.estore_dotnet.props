@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\estore_dotnet.props" />
+</Project>
